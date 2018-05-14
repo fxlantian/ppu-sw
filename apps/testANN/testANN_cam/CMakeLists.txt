@@ -1,0 +1,6 @@
+#add_application(testANN testANN.c TB run_ann.tcl)
+#add_application(testANN testANN_STOP.c TB run_ann.tcl)
+#add_application(testANN_cam testANN_cam.c TB run_ann.tcl)
+#add_application(testANN testANN_multi.c TB run_ann.tcl)
+#add_application(testANN testANN_single_multi.c TB run_ann.tcl)
+add_application(testANN_cam testANN_t.c TB run_ann.tcl)

@@ -1,0 +1,5 @@
+#add_application(testANN testANN.c TB run_ann.tcl)
+#add_application(testANN testANN_STOP.c TB run_ann.tcl)
+add_application(data_acquisition data_acquisition.c TB run_ann.tcl)
+#add_application(testANN testANN_multi.c TB run_ann.tcl)
+#add_application(testANN testANN_single_multi.c TB run_ann.tcl)

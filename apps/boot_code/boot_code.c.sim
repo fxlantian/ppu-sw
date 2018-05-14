@@ -1,0 +1,29 @@
+#include <uart.h>
+//#include <utils.h>
+
+void jump_and_start(volatile int *ptr);
+
+int uart_getdata(){
+  int mid[4];
+  int data = 0;
+  for(int i = 0; i < 4; i++)
+  {
+    mid[i] = uart_getchar();
+    data |= (mid[i] << (24 - i*8));
+  }
+  return data;
+}
+
+int main()
+{
+  jump_and_start((volatile int *)(0x80000080));
+}
+
+void jump_and_start(volatile int *ptr)
+{
+  asm("jalr x0, %0\n"
+      "nop\n"
+      "nop\n"
+      "nop\n"
+      : : "r" (ptr) );
+}

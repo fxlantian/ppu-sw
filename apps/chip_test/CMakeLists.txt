@@ -1,0 +1,1 @@
+add_application(chip_test power_test.c TB run_spi_standalone.tcl)
